@@ -8,7 +8,11 @@ import {Board} from '../board/board';
   selector: 'kanban-app'
 })
 @View({
-  template: '<div><navbar></navbar><board></board></div>',
+  template:
+  `<div>
+    <navbar></navbar>
+    <board></board>
+  </div>`,
   directives: [Navbar, Board]
 })
 export class KanbanApp {
