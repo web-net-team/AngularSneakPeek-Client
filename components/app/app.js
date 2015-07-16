@@ -12,6 +12,7 @@ if (typeof __metadata !== "function") __metadata = function (k, v) {
 };
 var angular2_1 = require('angular2/angular2');
 var navbar_1 = require('../navbar/navbar');
+var board_1 = require('../board/board');
 var KanbanApp = (function () {
     function KanbanApp() {
     }
@@ -20,11 +21,12 @@ var KanbanApp = (function () {
             selector: 'kanban-app'
         }),
         angular2_1.View({
-            template: '<div><navbar></navbar></div>',
-            directives: [navbar_1.Navbar]
+            template: '<div><navbar></navbar><board></board></div>',
+            directives: [navbar_1.Navbar, board_1.Board]
         }), 
         __metadata('design:paramtypes', [])
     ], KanbanApp);
     return KanbanApp;
 })();
 exports.KanbanApp = KanbanApp;
+//# sourceMappingURL=app.js.map
