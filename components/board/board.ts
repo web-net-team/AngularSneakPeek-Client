@@ -2,6 +2,7 @@
 
 import {Component, View, NgFor} from 'angular2/angular2';
 import {BoardService, IBoard} from '../../services/boardService';
+import {List} from '../list/list';
 
 @Component({
   selector: 'board',
@@ -9,7 +10,7 @@ import {BoardService, IBoard} from '../../services/boardService';
 })
 @View({
   templateUrl: 'components/board/board.html',
-  directives: [NgFor]
+  directives: [NgFor, List]
 })
 export class Board {
   

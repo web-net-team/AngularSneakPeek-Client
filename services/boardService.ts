@@ -70,7 +70,7 @@ class BoardService {
     	return result.length > 0 ? result[0] : undefined;
 	}
 	
-	getListFromBoard(boardId: Number, listId: number):IList {
+	getListFromBoard(boardId: Number, listId: Number):IList {
 		let list:Array<IList> = dummyData
 			.filter(board => board.id === boardId)
 			.map(board => board.lists)
