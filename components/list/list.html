@@ -1,5 +1,5 @@
-<div>
-	<div>{{list.title}}</div>
+<div class="list">
+	<h2>{{list.title}}</h2>
 	<div>
 		<ul>
 			<li *ng-for="#task of list.tasks">
@@ -7,4 +7,6 @@
   			</li>
 		</ul>
 	</div>
+	 <!--<div class="task" ng-repeat="task in ctrl.list.tasks track by $index">{{task}}</div>-->
+	<!--<add-card-button data-on-add="ctrl.addTask(task)"></add-card-button>-->
 </div>
