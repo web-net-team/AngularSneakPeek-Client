@@ -11,18 +11,20 @@ if (typeof __metadata !== "function") __metadata = function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var angular2_1 = require('angular2/angular2');
-var Main = (function () {
-    function Main() {
+var navbar_1 = require('../navbar/navbar');
+var KanbanApp = (function () {
+    function KanbanApp() {
     }
-    Main = __decorate([
+    KanbanApp = __decorate([
         angular2_1.Component({
-            selector: 'my-app'
+            selector: 'kanban-app'
         }),
         angular2_1.View({
-            template: '<h1>My first Angular 2 App</h1>'
+            template: '<div><navbar></navbar></div>',
+            directives: [navbar_1.Navbar]
         }), 
         __metadata('design:paramtypes', [])
-    ], Main);
-    return Main;
+    ], KanbanApp);
+    return KanbanApp;
 })();
-exports.Main = Main;
+exports.KanbanApp = KanbanApp;
