@@ -1,6 +1,6 @@
 ///<reference path="./typings/angular2/angular2.d.ts"/>
 
 import {bootstrap} from 'angular2/angular2';
-import {AppComponent} from 'app/app';
+import {Main} from 'components/main/main';
 
-bootstrap(AppComponent);
+bootstrap(Main);

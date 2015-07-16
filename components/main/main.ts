@@ -1,4 +1,5 @@
-///<reference path="../typings/angular2/angular2.d.ts"/>
+///<reference path="../../typings/angular2/angular2.d.ts"/>
+
 import {Component, View, bootstrap} from 'angular2/angular2';
 
 @Component({
@@ -7,5 +8,5 @@ import {Component, View, bootstrap} from 'angular2/angular2';
 @View({
   template: '<h1>My first Angular 2 App</h1>'
 })
-export class AppComponent {
+export class Main {
 }
