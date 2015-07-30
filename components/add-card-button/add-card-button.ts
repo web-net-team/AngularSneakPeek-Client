@@ -10,6 +10,7 @@ import {ITask} from '../../services/boardService';
 })
 @View({
   templateUrl: 'components/add-card-button/add-card-button.html',
+  styleUrls: ['components/add-card-button/add-card-button.css'],
   directives: [CSSClass]
 })
 class AddCardButton {

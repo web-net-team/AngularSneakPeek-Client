@@ -21,6 +21,7 @@ var KanbanApp = (function () {
             selector: 'kanban-app'
         }),
         angular2_1.View({
+            styles: ["\n    navbar { \n      position: fixed;\n      top: 0;\n      left: 0;\n      right: 0;\n      height: 50px;\n    }\n    board {\n      position: fixed;\n      top: 50px;\n      bottom: 0;\n      left: 0;\n      right: 0;\n    }\n  "],
             template: "<div>\n    <navbar></navbar>\n    <board></board>\n  </div>",
             directives: [navbar_1.Navbar, board_1.Board]
         }), 

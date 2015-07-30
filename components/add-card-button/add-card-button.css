@@ -1,0 +1,24 @@
+.add-new-card {
+    height: 2.2em;
+    transform-style: preserve-3d;
+    transition: transform 0.3s;
+}
+.add-new-card button.add-button {
+    width: 100%;
+    background: #56C48C;
+    color: rgba(0, 0, 0, 0.8);
+}
+.add-new-card .front,
+.add-new-card .back {
+    position: absolute;
+    width: 100%;
+    backface-visibility: hidden;
+}
+.add-new-card .back {
+    transform: rotateX(180deg);
+    background: #E6E6E6;
+    border-radius: 2px;
+}
+.add-new-card.flipped {
+    transform: rotateX(180deg);
+}

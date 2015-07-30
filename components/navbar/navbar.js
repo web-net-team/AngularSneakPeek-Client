@@ -19,7 +19,8 @@ var Navbar = (function () {
             selector: 'navbar'
         }),
         angular2_1.View({
-            templateUrl: 'components/navbar/navbar.html'
+            templateUrl: 'components/navbar/navbar.html',
+            styleUrls: ['components/navbar/navbar.css']
         }), 
         __metadata('design:paramtypes', [])
     ], Navbar);

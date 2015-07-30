@@ -6,7 +6,8 @@ import {Component, View, bootstrap} from 'angular2/angular2';
   selector: 'navbar'
 })
 @View({
-  templateUrl: 'components/navbar/navbar.html'
+  templateUrl: 'components/navbar/navbar.html',
+  styleUrls: ['components/navbar/navbar.css']
 })
 export class Navbar {
 }

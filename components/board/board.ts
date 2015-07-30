@@ -10,6 +10,7 @@ import {List} from '../list/list';
 })
 @View({
   templateUrl: 'components/board/board.html',
+  styleUrls: ['components/board/board.css'],
   directives: [NgFor, List]
 })
 export class Board {

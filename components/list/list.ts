@@ -11,6 +11,7 @@ import {AddCardButton} from '../add-card-button/add-card-button';
 })
 @View({
   templateUrl: 'components/list/list.html',
+  styleUrls: ['components/list/list.css'],
   directives: [NgFor, AddCardButton]
 })
 class List {

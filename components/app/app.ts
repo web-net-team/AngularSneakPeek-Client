@@ -8,6 +8,22 @@ import {Board} from '../board/board';
   selector: 'kanban-app'
 })
 @View({
+  styles: [`
+    navbar { 
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 50px;
+    }
+    board {
+      position: fixed;
+      top: 50px;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+  `],
   template:
   `<div>
     <navbar></navbar>
