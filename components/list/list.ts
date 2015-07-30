@@ -1,7 +1,8 @@
 ///<reference path="../../typings/angular2/angular2.d.ts"/>
 
 import {Component, View, NgFor} from 'angular2/angular2';
-import {BoardService, IList} from '../../services/boardService';
+import {BoardService, IList, ITask} from '../../services/boardService';
+import {AddCardButton} from '../add-card-button/add-card-button';
 
 @Component({
   selector: 'list',
@@ -10,7 +11,7 @@ import {BoardService, IList} from '../../services/boardService';
 })
 @View({
   templateUrl: 'components/list/list.html',
-  directives: [NgFor]
+  directives: [NgFor, AddCardButton]
 })
 class List {
   boardservice:BoardService;
@@ -20,8 +21,17 @@ class List {
     this.boardservice = boardService;
   }
   
-  set id(value: Number) {
-    this.list = this.boardservice.getListFromBoard(2, value);
+  set id(value: number) {
+    this.loadList(value);
+  }
+  
+  addTask(task: ITask): void {
+    this.boardservice.addTask(this.list.id, task);
+    this.loadList(this.list.id)
+  }
+  
+  loadList(id: number) {
+    this.list = this.boardservice.getList(id);
   }
 }
 

@@ -1,0 +1,10 @@
+<div class="add-new-card" [class]="{flipped: flipped}">
+  <div class="front">
+    <button class="pure-button add-button" (click)="flip()">Add new card</button>  
+  </div>
+  <div class="back">
+    <form class="pure-form">
+      <input type="text" [control]="taskTitle"><button class="pure-button" (click)="addTask()">Add</button>
+    </form>
+  </div>
+</div>
