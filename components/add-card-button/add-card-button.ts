@@ -1,6 +1,6 @@
 ///<reference path="../../typings/angular2/angular2.d.ts"/>
 
-import {Component, View, Parent, Ancestor, CSSClass} from 'angular2/angular2';
+import {Component, View, Parent, Ancestor, CSSClass, Control, formDirectives} from 'angular2/angular2';
 //import {Control, FormDirectives} from 'angular2/forms';
 import {List} from '../list/list';
 import {ITask} from '../../services/boardService';
@@ -11,17 +11,17 @@ import {ITask} from '../../services/boardService';
 @View({
   templateUrl: 'components/add-card-button/add-card-button.html',
   styleUrls: ['components/add-card-button/add-card-button.css'],
-  directives: [CSSClass]
+  directives: [CSSClass, formDirectives]
 })
 class AddCardButton {
   //list: List;
   flipped: Boolean;
-  //taskTitle: Control;
+  taskTitle: Control;
   
   constructor() {
     //this.list = list;
     
-    //this.taskTitle = new Control('');
+    this.taskTitle = new Control();
     this.reset();
   }
   
@@ -40,7 +40,7 @@ class AddCardButton {
   }
   
   reset() {
-    //this.taskTitle.Value = '';
+    this.taskTitle.value = '';
     this.flipped = false;
   }
 }

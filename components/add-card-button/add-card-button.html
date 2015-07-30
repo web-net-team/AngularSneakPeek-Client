@@ -4,7 +4,8 @@
   </div>
   <div class="back">
     <form class="pure-form">
-      <input type="text"><button class="pure-button" (click)="addTask()">Add</button>
+      <input type="text" [ng-form-control]="taskTitle" />
+      <button class="pure-button" (click)="addTask()">Add</button>
     </form>
   </div>
 </div>
