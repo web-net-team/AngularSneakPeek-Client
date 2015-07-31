@@ -1,12 +1,11 @@
 ///<reference path="../../typings/angular2/angular2.d.ts"/>
 
-import {Component, View, Parent, Ancestor, CSSClass, Control, formDirectives} from 'angular2/angular2';
-//import {Control, FormDirectives} from 'angular2/forms';
+import {Component, View, CSSClass, Control, formDirectives, NgRequiredValidator, EventEmitter} from 'angular2/angular2';
 import {List} from '../list/list';
-import {ITask} from '../../services/boardService';
 
 @Component({
-  selector: 'add-card-button'
+  selector: 'add-card-button',
+  events: ['itemCreated:itemcreated']
 })
 @View({
   templateUrl: 'components/add-card-button/add-card-button.html',
@@ -14,24 +13,22 @@ import {ITask} from '../../services/boardService';
   directives: [CSSClass, formDirectives]
 })
 class AddCardButton {
-  //list: List;
   flipped: Boolean;
   taskTitle: Control;
+  itemCreated: EventEmitter;
   
   constructor() {
-    //this.list = list;
-    
     this.taskTitle = new Control();
+    //this.taskTitle.validator = NgRequiredValidator;
+    
+    this.itemCreated = new EventEmitter();
+    
     this.reset();
   }
   
-  addTask(): void {
-    let task = {
-      id: 0
-      //title: this.taskTitle.value  
-    };
+  addItem(): void {
+    this.itemCreated.next(this.taskTitle.value)   
     
-    //this.list.addTask(task);    
     this.reset();
   }
   
@@ -40,7 +37,7 @@ class AddCardButton {
   }
   
   reset() {
-    this.taskTitle.value = '';
+    this.taskTitle.updateValue('');
     this.flipped = false;
   }
 }

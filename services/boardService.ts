@@ -79,8 +79,12 @@ class BoardService {
 	addTask(listId: number, task: ITask): void {
 		task.id = this.getNewTaskId();	
 	 		
-		for(let board in dummyData) {
-			for(let list in board.lists) {
+		for(let boardIndex in dummyData) {
+			let board:IBoard = dummyData[boardIndex];
+			
+			for(let listIndex in board.lists) {
+				let list:IList = board.lists[listIndex];
+				
 				if (list.id === listId) {
 					list.tasks.push();
 				}
@@ -95,7 +99,7 @@ class BoardService {
       		.reduce((p, n) => p.concat(n),[])
 			.map(list => list.id);
 			
-		return Math.max.apply(null, existingIds);
+		return Math.max.apply(null, existingIds) + 1;
 	}
 };
 
