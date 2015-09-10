@@ -1,6 +1,6 @@
 ///<reference path="../../typings/angular2/angular2.d.ts"/>
 
-import {Component, View, CORE_DIRECTIVES} from 'angular2/angular2';
+import {Component, View, CORE_DIRECTIVES, FORM_DIRECTIVES, Control} from 'angular2/angular2';
 
 @Component({
   selector: 'my-component',
@@ -9,7 +9,7 @@ import {Component, View, CORE_DIRECTIVES} from 'angular2/angular2';
 @View({
   templateUrl: 'components/my-component/my-component.html',
   styleUrls: ['components/my-component/my-component.css'],
-  directives: [CORE_DIRECTIVES]
+  directives: [CORE_DIRECTIVES, FORM_DIRECTIVES]
 })
 export class MyComponent {
   name: string;
