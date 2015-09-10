@@ -1,5 +1,0 @@
-<div class="list">
-	<h2>{{list.title}}</h2>
-	<div class="task" *ng-for="#task of list.tasks">{{task.title}}</div>
-	<add-card-button (itemCreated)="addTask($event)"></add-card-button>
-</div>
