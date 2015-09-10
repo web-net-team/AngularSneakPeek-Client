@@ -5,7 +5,7 @@ import {BoardService, IBoard} from '../../services/boardService';
 
 @Component({
   selector: 'board',
-  viewBindings: [BoardService]
+  bindings: [BoardService]
 })
 @View({
   templateUrl: 'components/board/board.html',

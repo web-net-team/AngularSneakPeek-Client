@@ -4,7 +4,7 @@ import {Component, View, CORE_DIRECTIVES, FORM_DIRECTIVES, Control} from 'angula
 
 @Component({
   selector: 'my-component',
-  viewBindings: []
+  bindings: []
 })
 @View({
   templateUrl: 'components/my-component/my-component.html',
