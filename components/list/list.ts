@@ -5,7 +5,8 @@ import {BoardService, IList, ITask} from '../../services/boardService';
 
 @Component({
   selector: 'list',
-  bindings: [BoardService]
+  bindings: [BoardService],
+  properties:['id:list-id']
 })
 @View({
   templateUrl: 'components/list/list.html',
@@ -18,8 +19,10 @@ class List {
   
   constructor(boardService:BoardService) {
     this.boardservice = boardService;
-    
-    this.loadList(2);
+  }
+  
+  set id(value: number) {
+    this.loadList(value);
   }
   
   loadList(id: number) {
