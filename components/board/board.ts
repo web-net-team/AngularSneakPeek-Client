@@ -1,10 +1,11 @@
 ///<reference path="../../typings/angular2/angular2.d.ts"/>
 
 import {Component, View, CORE_DIRECTIVES, FORM_DIRECTIVES, Control} from 'angular2/angular2';
+import {BoardService, IBoard} from '../../services/boardService';
 
 @Component({
   selector: 'board',
-  viewBindings: []
+  viewBindings: [BoardService]
 })
 @View({
   templateUrl: 'components/board/board.html',
@@ -13,8 +14,11 @@ import {Component, View, CORE_DIRECTIVES, FORM_DIRECTIVES, Control} from 'angula
 })
 export class Board {
   name: string;
+  board: IBoard
   
-  constructor() {
-    this.name = "MyBoard";
+  constructor(boardService: BoardService) {
+    
+    this.board = boardService.getBoard(2);
+    this.name = this.board.title;
   }
 }
