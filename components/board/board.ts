@@ -2,6 +2,7 @@
 
 import {Component, View, CORE_DIRECTIVES, FORM_DIRECTIVES, Control} from 'angular2/angular2';
 import {BoardService, IBoard} from '../../services/boardService';
+import {List} from '../list/list';
 
 @Component({
   selector: 'board',
@@ -10,7 +11,7 @@ import {BoardService, IBoard} from '../../services/boardService';
 @View({
   templateUrl: 'components/board/board.html',
   styleUrls: ['components/board/board.css'],
-  directives: [CORE_DIRECTIVES, FORM_DIRECTIVES]
+  directives: [CORE_DIRECTIVES, FORM_DIRECTIVES, List]
 })
 export class Board {
   name: string;
