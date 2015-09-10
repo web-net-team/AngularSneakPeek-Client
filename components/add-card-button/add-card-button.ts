@@ -1,6 +1,6 @@
 ///<reference path="../../typings/angular2/angular2.d.ts"/>
 
-import {Component, View, CORE_DIRECTIVES, FORM_DIRECTIVES, Control, EventEmitter} from 'angular2/angular2';
+import {Component, View, CORE_DIRECTIVES, FORM_DIRECTIVES, Control, EventEmitter, ViewEncapsulation} from 'angular2/angular2';
 
 @Component({
   selector: 'add-card-button',
@@ -9,7 +9,8 @@ import {Component, View, CORE_DIRECTIVES, FORM_DIRECTIVES, Control, EventEmitter
 @View({
   templateUrl: 'components/add-card-button/add-card-button.html',
   styleUrls: ['components/add-card-button/add-card-button.css'],
-  directives: [CORE_DIRECTIVES, FORM_DIRECTIVES]
+  directives: [CORE_DIRECTIVES, FORM_DIRECTIVES],
+  encapsulation: ViewEncapsulation.NATIVE
 })
 export class AddCardButton {
   flipped: Boolean;
