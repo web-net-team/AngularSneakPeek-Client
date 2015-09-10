@@ -2,7 +2,9 @@ components/**/*.js
 components/**/*.js.map
 services/**/*.js
 services/**/*.js.map
+.templates/**/*.js
+.templates/**/*.js.map
 bootstrap.js
 bootstrap.js.map
-//node_modules
+node_modules
 *.log
