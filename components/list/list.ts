@@ -29,6 +29,16 @@ class List {
   loadList(id: number) {
     this.list = this.boardservice.getList(id);
   }
+  
+  addTask($event) {
+    let task: ITask = {
+      id: 0,
+      title: $event
+    };
+    
+    this.boardservice.addTask(this.list.id, task);
+    this.list.tasks.push(task);
+  }
 }
 
 export { List };
