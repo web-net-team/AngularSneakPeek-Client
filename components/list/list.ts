@@ -26,9 +26,14 @@ class List {
     this.loadList(value);
   }
   
-  addTask(task: ITask): void {
+  addTask($event) {
+    let task: ITask = {
+      id: 0,
+      title: $event
+    };
+    
     this.boardservice.addTask(this.list.id, task);
-    this.loadList(this.list.id)
+    this.list.tasks.push(task);
   }
   
   loadList(id: number) {
