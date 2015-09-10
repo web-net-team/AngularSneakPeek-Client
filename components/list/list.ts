@@ -2,6 +2,7 @@
 
 import {Component, View, CORE_DIRECTIVES, FORM_DIRECTIVES, Control} from 'angular2/angular2';
 import {BoardService, IList, ITask} from '../../services/boardService';
+import {AddCardButton} from '../add-card-button/add-card-button'
 
 @Component({
   selector: 'list',
@@ -11,7 +12,7 @@ import {BoardService, IList, ITask} from '../../services/boardService';
 @View({
   templateUrl: 'components/list/list.html',
   styleUrls: ['components/list/list.css'],
-  directives: [CORE_DIRECTIVES, FORM_DIRECTIVES]
+  directives: [CORE_DIRECTIVES, FORM_DIRECTIVES, AddCardButton]
 })
 class List {
   boardservice:BoardService;
