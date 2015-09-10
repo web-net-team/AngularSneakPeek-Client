@@ -6,7 +6,7 @@ import {AddCardButton} from '../add-card-button/add-card-button';
 
 @Component({
   selector: 'list',
-  viewInjector: [BoardService],
+  bindings: [BoardService],
   properties: ['id:list-id']
 })
 @View({

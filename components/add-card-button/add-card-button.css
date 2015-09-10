@@ -5,6 +5,7 @@
 }
 .add-new-card button.add-button {
     width: 100%;
+    border: none;
     background: #56C48C;
     color: rgba(0, 0, 0, 0.8);
 }

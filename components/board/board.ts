@@ -6,7 +6,7 @@ import {List} from '../list/list';
 
 @Component({
   selector: 'board',
-  viewInjector: [BoardService]
+  viewBindings: [BoardService]
 })
 @View({
   templateUrl: 'components/board/board.html',
