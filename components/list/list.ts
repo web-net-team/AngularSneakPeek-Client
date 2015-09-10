@@ -5,8 +5,7 @@ import {BoardService, IList, ITask} from '../../services/boardService';
 
 @Component({
   selector: 'list',
-  bindings: [BoardService],
-  properties: ['id:list-id']
+  bindings: [BoardService]
 })
 @View({
   templateUrl: 'components/list/list.html',
