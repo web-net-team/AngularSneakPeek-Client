@@ -2,19 +2,35 @@
 
 import {Component, View} from 'angular2/angular2';
 
+import {NavBar} from '../navbar/navbar';
+import {Board} from '../board/board';
+
 @Component({
   selector: 'kanban-app'
 })
 @View({
-  styles: [],
+  styles: [`
+    navbar { 
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 50px;
+    }
+    board {
+      position: fixed;
+      top: 50px;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+  `],
   template:
-  `Hello {{ name }}`,
-  directives: []
+  `<div>
+    <navbar></navbar>
+    <board></board>
+  </div>`,
+  directives: [NavBar, Board]
 })
 export class KanbanApp {
-  name: string;
-  
-  constructor() {
-    this.name = 'Alice';
-  }
 }
